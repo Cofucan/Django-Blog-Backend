@@ -1,6 +1,9 @@
 import pytest
-from django.contrib.auth.models import User
 from api.models import Post
+from django.contrib.auth import get_user_model
+
+
+User = get_user_model()
 
 
 # Test superuser
@@ -16,6 +19,6 @@ def test_user():
 
 
 @pytest.fixture
-def test_post(user):
-    post = Post.objects.create(title='Test Post', content='This is a test post', author=user)
+def test_post(test_user):
+    post = Post.objects.create(title='Test Post', content='This is a test post', author=test_user)
     return post

@@ -11,7 +11,7 @@ from .serializers import UserSerializer, PostSerializer, CommentSerializer
 class UserRegistrationView(APIView):
     permission_classes = [permissions.AllowAny]
 
-    def post(self, request, format='json'):
+    def post(self, request):
         serializer = UserSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()

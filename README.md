@@ -58,7 +58,7 @@ There is a seed script that seeds some users and superusers to the db. To seed t
 python manage.py seed_users
 ```
 
-You should see the status on the terminal. After running the server, you can login to any of the user accounts using the password '12345678`.
+You should see the status on the terminal. After running the server, you can login to any of the user accounts using the password `12345678`.
 
 ## Running the Server
 
